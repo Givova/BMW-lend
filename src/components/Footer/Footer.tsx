@@ -196,12 +196,19 @@ const InnText = styled.span`
 `;
 
 const Footer: React.FC = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <FooterContainer>
       <div className="container">
         <FooterContent>
           <FooterColumn>
-            <FooterLogo>
+            <FooterLogo onClick={scrollToTop}>
               ProTech<span>Moto</span>
             </FooterLogo>
             <p>Официальный импортер мотоциклов BMW в России. Продажа и обслуживание мотоциклов.</p>
@@ -210,8 +217,8 @@ const Footer: React.FC = () => {
           <FooterColumn>
             <FooterTitle>Информация</FooterTitle>
             <FooterList>
-              <FooterListItem><a href="#advantages">О нас</a></FooterListItem>
-              <FooterListItem><a href="#cases">Кейсы</a></FooterListItem>
+              <FooterListItem><a href="#catalog">Каталог</a></FooterListItem>
+              <FooterListItem><a href="#advantages">Процесс покупки</a></FooterListItem>
               <FooterListItem><a href="#reviews">Отзывы</a></FooterListItem>
             </FooterList>
           </FooterColumn>

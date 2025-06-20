@@ -380,7 +380,7 @@ const Reviews: React.FC = () => {
     <ReviewsSection id="reviews">
       <div className="container">
         <SectionTitle>
-          Узнайте, что говорят о нас владельцы мотоциклов <span>Kawasaki</span>
+          Узнайте, что говорят о нас владельцы мотоциклов <span>BMW</span>
         </SectionTitle>
         <SectionSubtitle>
           Здесь собраны отзывы о наших услугах и работе с нами

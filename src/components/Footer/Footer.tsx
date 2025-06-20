@@ -204,7 +204,7 @@ const Footer: React.FC = () => {
             <FooterLogo>
               ProTech<span>Moto</span>
             </FooterLogo>
-            <p>Официальный импортер мотоциклов Kawasaki в России. Продажа и обслуживание мотоциклов.</p>
+            <p>Официальный импортер мотоциклов BMW в России. Продажа и обслуживание мотоциклов.</p>
           </FooterColumn>
 
           <FooterColumn>

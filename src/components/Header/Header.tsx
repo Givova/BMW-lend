@@ -237,7 +237,7 @@ const LottieWrapper = styled.div`
 
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const whatsappMessage = "Здравствуйте, интересует каталог мотоциклов Kawasaki";
+  const whatsappMessage = "Здравствуйте, интересует каталог мотоциклов BMW";
   const whatsappLink = `https://wa.me/79203383324?text=${encodeURIComponent(whatsappMessage)}`;
 
   const scrollToTop = () => {

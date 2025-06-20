@@ -222,13 +222,13 @@ const CatalogRequest: React.FC = () => {
         <RequestContainer>
           <RequestContent>
             <RequestTitle>
-              Запросить <span>каталог мотоциклов Kawasaki</span> в WhatsApp
+              Запросить <span>каталог мотоциклов BMW</span> в WhatsApp
             </RequestTitle>
             <RequestDescription>
-              В каталоге представлены все модели мотоциклов Kawasaki с подробными характеристиками, ценами и комплектациями
+              В каталоге представлены все модели мотоциклов BMW с подробными характеристиками, ценами и комплектациями
             </RequestDescription>
             <a
-              href="https://wa.me/79203383324?text=Здравствуйте,%20интересует%20каталог%20мотоциклов%20Kawasaki"
+              href="https://wa.me/79203383324?text=Здравствуйте,%20интересует%20каталог%20мотоциклов%20BMW"
               target="_blank"
               rel="noopener noreferrer"
               style={{ textDecoration: 'none' }}
@@ -250,10 +250,10 @@ const CatalogRequest: React.FC = () => {
             <ModalContent>
               <CloseButton onClick={handleCloseModal} aria-label="Закрыть окно">×</CloseButton>
               <RequestTitle>
-                Запросить <span>каталог мотоциклов Kawasaki</span> в WhatsApp
+                Запросить <span>каталог мотоциклов BMW</span> в WhatsApp
               </RequestTitle>
               <RequestDescription>
-                В каталоге представлены все модели мотоциклов Kawasaki с подробными характеристиками, ценами и комплектациями
+                В каталоге представлены все модели мотоциклов BMW с подробными характеристиками, ценами и комплектациями
               </RequestDescription>
               {!submitted ? (
                 <RequestForm onSubmit={handleSubmit}>

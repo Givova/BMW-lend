@@ -54,9 +54,9 @@ const App = (): JSX.Element => {
   return (
     <ErrorBoundary>
       <Helmet>
-        <title>ProTechMoto - Мотоциклы Kawasaki | Профессиональная мототехника</title>
-        <meta name="description" content="ProTechMoto - это мотоциклы Kawasaki. Широкий выбор моделей, качественное обслуживание и лучшие цены." />
-        <meta name="keywords" content="мотоциклы, Kawasaki, ProTechMoto, мототехника, мотосалон" />
+        <title>ProTechMoto - Мотоциклы BMW | Профессиональная мототехника</title>
+        <meta name="description" content="ProTechMoto - это мотоциклы BMW. Широкий выбор моделей, качественное обслуживание и лучшие цены." />
+        <meta name="keywords" content="мотоциклы, BMW, ProTechMoto, мототехника, мотосалон" />
         <link rel="canonical" href="https://protechmoto.ru" />
       </Helmet>
       <GlobalStyles />
@@ -65,7 +65,7 @@ const App = (): JSX.Element => {
         <Hero />
         <Process />
         <Catalog />
-        <Cases />
+        {/* <Cases /> */}
         <Reviews />
         <CatalogRequest />
       </main>

@@ -103,7 +103,7 @@ const ShopButton = styled.a`
   }
 `;
 
-const MobileNav = styled.nav<{ isOpen: boolean }>`
+const MobileNav = styled.nav<{ $isOpen: boolean }>`
   display: none;
   position: fixed;
   top: 0;
@@ -113,7 +113,7 @@ const MobileNav = styled.nav<{ isOpen: boolean }>`
   background-color: var(--light-color);
   padding: 80px 10px 20px;
   box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
-  transform: translateX(${props => props.isOpen ? '0' : '100%'});
+  transform: translateX(${props => props.$isOpen ? '0' : '100%'});
   transition: transform 0.3s ease-in-out;
   z-index: 998;
   display: flex;
@@ -184,7 +184,7 @@ const MobileNavItem = styled.li`
   }
 `;
 
-const Overlay = styled.div<{ isOpen: boolean }>`
+const Overlay = styled.div<{ $isOpen: boolean }>`
   display: none;
   position: fixed;
   top: 0;
@@ -192,8 +192,8 @@ const Overlay = styled.div<{ isOpen: boolean }>`
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  opacity: ${props => props.isOpen ? 1 : 0};
-  visibility: ${props => props.isOpen ? 'visible' : 'hidden'};
+  opacity: ${props => props.$isOpen ? 1 : 0};
+  visibility: ${props => props.$isOpen ? 'visible' : 'hidden'};
   transition: opacity 0.3s ease-in-out;
   z-index: 997;
 
@@ -297,8 +297,8 @@ const Header: React.FC = () => {
           </MobileMenuButton>
         </HeaderInner>
       </div>
-      <Overlay isOpen={isMobileMenuOpen} onClick={closeMobileMenu} />
-      <MobileNav isOpen={isMobileMenuOpen}>
+      <Overlay $isOpen={isMobileMenuOpen} onClick={closeMobileMenu} />
+      <MobileNav $isOpen={isMobileMenuOpen}>
         <MobileNavList>
           <MobileNavItem><a href="#catalog" onClick={handleNavLinkClick}>Каталог</a></MobileNavItem>
           <MobileNavItem><a href="#advantages" onClick={handleNavLinkClick}>Процесс покупки</a></MobileNavItem>

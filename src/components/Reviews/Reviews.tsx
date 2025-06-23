@@ -186,10 +186,14 @@ const ReviewRating = styled.div`
   margin-bottom: 12px;
 `;
 
-const Star = styled.span<{ filled: boolean }>`
-  color: ${props => props.filled ? '#FFD700' : '#e0e0e0'};
+const Star = styled.span<{ $filled: boolean }>`
+  color: ${props => props.$filled ? '#FFD700' : '#e0e0e0'};
   font-size: 16px;
   margin-right: 2px;
+
+  @media (max-width: var(--breakpoint-md)) {
+    font-size: 14px;
+  }
 `;
 
 const ReviewText = styled.p`
@@ -350,7 +354,7 @@ const Reviews: React.FC = () => {
 
   const renderStars = (rating: number) => {
     return [...Array(5)].map((_, index) => (
-      <Star key={index} filled={index < rating}>★</Star>
+      <Star key={index} $filled={index < rating}>★</Star>
     ));
   };
 

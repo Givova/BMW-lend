@@ -180,18 +180,18 @@ const CaseDescription = styled.p`
   line-height: 1.5;
 `;
 
-const Modal = styled.div<{ isOpen: boolean }>`
+const Modal = styled.div<{ $isOpen: boolean }>`
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: ${props => props.isOpen ? 'flex' : 'none'};
-  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: ${props => props.$isOpen ? 'flex' : 'none'};
   justify-content: center;
+  align-items: center;
   z-index: 1000;
-  padding: 20px;
+  backdrop-filter: blur(10px);
 `;
 
 const ModalContent = styled.div`
@@ -377,7 +377,7 @@ const Cases: React.FC = () => {
           ))}
         </CasesGrid>
 
-        <Modal isOpen={modalOpen} onClick={closeModal}>
+        <Modal $isOpen={modalOpen} onClick={closeModal}>
           <ModalContent onClick={(e) => e.stopPropagation()}>
             <CloseButton onClick={closeModal}>&times;</CloseButton>
             {selectedCase && (

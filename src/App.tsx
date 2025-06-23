@@ -5,7 +5,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Process from './components/Advantages';
 import Catalog from './components/Catalog';
-import EngineSound from './components/EngineSound';
+import EngineSound, { SectionTitle } from './components/EngineSound';
 import CatalogRequest from './components/CatalogRequest';
 import Cases from './components/Cases';
 import Reviews from './components/Reviews';
@@ -66,6 +66,7 @@ const App = (): JSX.Element => {
         <Hero />
         <Process />
         <Catalog />
+        <SectionTitle />
         <EngineSound />
         {/* <Cases /> */}
         <Reviews />

@@ -1,63 +1,65 @@
 import React, { useState, useRef } from 'react';
 import styled, { keyframes, css } from 'styled-components';
 
-
-
+// Основной компонент баннера
 const SectionContainer = styled.section`
-  background: transparent;
-  padding: var(--spacing-3xl) 0;
+  padding: 0;
   position: relative;
   overflow: hidden;
+  height: 80vh;
+  background: black;
 
   @media (max-width: var(--breakpoint-md)) {
-    padding: var(--spacing-2xl) 0;
+    height: 70vh;
   }
 `;
 
 const Container = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-md);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
   position: relative;
   z-index: 1;
 `;
 
-const Title = styled.h2`
-  color: var(--text-color);
-  text-align: center;
-  margin-bottom: var(--spacing-2xl);
-  font-size: var(--font-size-3xl);
-  font-weight: 700;
-  
-  @media (max-width: var(--breakpoint-md)) {
-    font-size: var(--font-size-2xl);
-  }
-`;
-
 const EngineContainer = styled.div`
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: var(--spacing-xl);
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 50%);
+    z-index: 2;
+  }
 `;
 
 const EngineImage = styled.img`
-  max-width: 100%;
-  height: auto;
-  border-radius: 16px;
-  box-shadow: 
-    0 20px 40px rgba(0, 0, 0, 0.6),
-    0 10px 20px rgba(0, 0, 0, 0.4),
-    inset 0 1px 1px rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0;
+  box-shadow: none;
+  
+  @media (max-width: var(--breakpoint-md)) {
+    object-fit: contain; /* На мобильных показываем мотоцикл полностью */
+  }
   
   &:hover {
-    transform: scale(1.02);
-    box-shadow: 
-      0 25px 50px rgba(0, 0, 0, 0.7),
-      0 15px 30px rgba(0, 0, 0, 0.5),
-      inset 0 1px 1px rgba(255, 255, 255, 0.2);
+    transform: none;
+    box-shadow: none;
   }
 `;
 
@@ -170,8 +172,6 @@ const StartButton = styled.button<{ $isPlaying: boolean }>`
   }
 `;
 
-
-
 const EngineSound: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
@@ -196,17 +196,15 @@ const EngineSound: React.FC = () => {
   return (
     <SectionContainer>
       <Container>
-        <Title>Почувствуй мощь BMW</Title>
-        
         <EngineContainer>
           <EngineImage 
-            src="/images/rrr.png" 
-            alt="BMW Engine"
+            src="/images/rrrr.png" 
+            alt="Двигатель BMW"
           />
           
           {/* Столбчатый эквалайзер */}
           <EqualizerContainer $visible={isPlaying}>
-            {Array.from({ length: 20 }, (_, index) => (
+            {Array.from({ length: 40 }, (_, index) => (
               <EqualizerBar
                 key={index}
                 $index={index}

@@ -278,6 +278,7 @@ const Header: React.FC = () => {
             <NavList>
               <NavItem><a href="#catalog">Каталог</a></NavItem>
               <NavItem><a href="#advantages">Процесс покупки</a></NavItem>
+              <NavItem><a href="#engine-sound">Мощь BMW</a></NavItem>
               {/* <NavItem><a href="#cases">Кейсы</a></NavItem> */}
               <NavItem><a href="#reviews">Отзывы</a></NavItem>
             </NavList>
@@ -302,6 +303,7 @@ const Header: React.FC = () => {
         <MobileNavList>
           <MobileNavItem><a href="#catalog" onClick={handleNavLinkClick}>Каталог</a></MobileNavItem>
           <MobileNavItem><a href="#advantages" onClick={handleNavLinkClick}>Процесс покупки</a></MobileNavItem>
+          <MobileNavItem><a href="#engine-sound" onClick={handleNavLinkClick}>Мощь BMW</a></MobileNavItem>
           <MobileNavItem><a href="#cases" onClick={handleNavLinkClick}>Кейсы</a></MobileNavItem>
           <MobileNavItem><a href="#reviews" onClick={handleNavLinkClick}>Отзывы</a></MobileNavItem>
         </MobileNavList>

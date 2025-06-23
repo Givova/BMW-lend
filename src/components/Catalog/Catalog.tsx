@@ -225,15 +225,23 @@ const TdContent = styled.div`
 
 /* Ячейки таблицы */
 const FeaturesTd = styled.td<{ $isLeftColumn?: boolean }>`
-  padding: 8px 16px;
-  border-bottom: 1px solid #e0e0e0;
-  text-align: ${props => props.$isLeftColumn ? 'left' : 'center'};
-  font-weight: ${props => props.$isLeftColumn ? '600' : '400'};
-  color: ${props => props.$isLeftColumn ? 'var(--text-color)' : 'var(--dark-gray)'};
-  
-  @media (max-width: var(--breakpoint-md)) {
-    padding: 6px 8px;
-    font-size: 14px;
+  padding: 0.5rem 1rem; /* p-2 ps-4 pe-4 */
+  border: 1px solid #e5e7eb; /* border (значение цвета border-gray-200) */
+  width: 50%; /* w-1/2 */
+  vertical-align: middle; /* align-middle */
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1); /* Изменено для плавности всех эффектов */
+  position: relative; /* Добавлено для работы z-index */
+
+  /* Единые стили для всех ячеек */
+  font-weight: 500; /* Единый шрифт */
+  color: #222; /* Единый цвет текста */
+  background-color: #f7fafd; /* Единый цвет фона */
+
+  &:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1); /* hover:shadow-md */
+    z-index: 10; /* Добавлено, чтобы тень была видна */
+    transform: scale(1.03); /* Добавлено для эффекта увеличения */
+    background-color: #e2e8f0; /* Чуть более темный фон при наведении */
   }
 `;
 
